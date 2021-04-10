@@ -1,0 +1,23 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  
+}
+
+.signup {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  
+}
+
+.signup > button {
+  margin-top: 10px;
+}
+
+a {
+  color: white;
+  font-size: 18px;
+}

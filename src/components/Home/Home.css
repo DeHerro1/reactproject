@@ -1,0 +1,21 @@
+.home {
+    padding: 10px;
+    font-size: 16px;
+}
+
+.ul li {
+    display: flex;
+    flex-direction: column;
+}
+
+.companyName {
+    margin-top: 30px;
+}
+
+span {
+    display: block;
+    font-size: 20px;
+    margin-top: 10px;
+    padding-bottom: 5px;
+    font-weight: 700;
+}
