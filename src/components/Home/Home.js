@@ -82,16 +82,38 @@ const Home = (props) => {
 
     return (
         <div className="home">
-            <div>
+            <div className="nav">
+                <div className="nav_items">
+                    <h2>Linked </h2>
+                </div>
                 <input 
                     type="text"
                     onChange={handleChange}
                     value={text}
                     placeholder="Search companies"
                     />
-                    {renderSuggestions()}
+                    <div>
+                        <p>Roles:</p>
+                    <select>
+                        <option>Product Manager</option>
+                        <option>Front-end developer</option>
+                        <option>Back-end developer</option>
+                        <option>Full-stack developer</option>
+                        <option>UI/UX designer</option>
+                    </select>
+                </div>
+                <div>
+                    <p>Location:</p>
+                    <select>
+                        <option>France</option>
+                        <option>Ghana</option>
+                        <option>Nigeria</option>
+                        <option>South Africa</option>
+                    </select>
+                </div>
+                <button>Search</button>
             </div>
-
+            {renderSuggestions()}
             {
                 items
             }
