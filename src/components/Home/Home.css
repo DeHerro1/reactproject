@@ -20,9 +20,19 @@ input {
     margin: 0 auto;
     font-size: 1rem;
     border: none;
+    margin-bottom: 10px;
     border-radius: 5px;
     width: 90%;
     padding: 5px;
+}
+
+.btn {
+    height: 30px;
+    margin: 0 30px;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
 }
 
 .ul li {
