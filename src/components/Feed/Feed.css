@@ -1,0 +1,26 @@
+
+.navbar {
+    display: flex;
+    position: fixed;
+    bottom: 5px;
+    width: 100%;
+    text-align: center;
+}
+
+.goto_home, .goto_search, .goto_profile {
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid grey;
+}
+
+.home_link, .search_link, .profile_link {
+    color: black;
+}
+
+.goto_home:hover, 
+.goto_search:hover, 
+.goto_profile:hover {
+    background: rgb(175, 175, 175);
+    transition: 0.4s ease;
+}

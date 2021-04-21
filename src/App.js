@@ -1,13 +1,40 @@
 import React from 'react'
 import './App.css';
 import Home from './components/Home/Home';
+import Feed from './components/Feed/Feed';
+import Signup from './components/Signup/Signup';
+import Signin from './components/Signin/Signin';
+import CompanyProfile from './components/CompanyProfile/CompanyProfile';
+
+import {Switch, Route} from 'react-router-dom';
+import AuthProvider from './AuthContext';
 
 
-const App = (props) => {
-    console.log(props);
+const App = () => {
     return (
         <div>
-            <Home />
+            <AuthProvider>
+            <Switch>
+                <Route path="/home">
+                    <Feed />
+                </Route>
+                <Route path="/search">
+                    <Home />
+                </Route>
+                {/* <Route path="/Profile">
+                    <Profile />
+                </Route> */}
+                <Route path="/signin">
+                    <Signin />
+                </Route>
+                <Route path="/companyprofile">
+                    <CompanyProfile />
+                </Route>
+                <Route path="/">
+                    <Signup />
+                </Route>
+            </Switch>
+            </AuthProvider>
         </div>
     )
 }
