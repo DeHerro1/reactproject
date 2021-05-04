@@ -4,33 +4,61 @@
 
 .nav {
     width: 100%;
-    background: rgb(247, 67, 61);
+    /* background: rgb(247, 67, 61); */
     display: flex;
     flex-direction: column;
     padding: 5px 0;
     text-align: center;
-    color: white;
+    /* color: white; */
 }
 
-.nav_items {
-    margin-bottom: 10px;
+.searchInputs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.labelJob {
+    font-size: 14px;
+}
+
+.goBackIcon {
+    font-size: 30px !important;
+    color: black;
+    display: none;
+}
+
+.searchIcons, .goBackIcon {
+    justify-self: center !important;
+    color: black;
+}
+
+.searchIcons {
+    font-size: 20px !important;
+    margin: 0 5px;
 }
 
 input {
     margin: 0 auto;
     font-size: 1rem;
     border: none;
+    background-color: #e9e9e9;
     margin-bottom: 10px;
+    height: 40px;
     border-radius: 5px;
     width: 90%;
     padding: 5px;
 }
 
-.btn {
-    height: 30px;
-    margin: 0 30px;
-    border-radius: 10px;
+.searchBtn {
+    height: 50px !important;
+    width: 80%;
+    padding: 10px;
+    /* border-radius: 10px; */
     font-size: 1rem;
+    background-color: #008000c2;
+    font-size: 50px !important;
+    color: white;
     cursor: pointer;
     border: none;
 }
@@ -50,4 +78,19 @@ span {
     margin-top: 10px;
     padding-bottom: 5px;
     font-weight: 700;
+}
+
+@media (min-width: 768px) {
+    .goBackIcon {
+        display: none;
+    }
+
+    .searchInputs {
+        background-color: rgb(235, 235, 235);
+        border: 1px solid rgb(194, 193, 193);
+    }
+
+    .searchInputsContainer {
+        display: flex;
+    }
 }

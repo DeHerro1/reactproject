@@ -1,0 +1,11 @@
+.overAll {
+ padding: 5px;
+ width: 80px;
+ text-align: center;
+}
+
+@media (min-width: 768px) {
+    .overAll {
+         border-right: 1px solid grey;
+    }    
+}
