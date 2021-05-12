@@ -1,0 +1,30 @@
+.goto_home, 
+.goto_search, 
+.goto_profile {
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid grey;
+}
+
+.home_link, 
+.search_link, 
+.profile_link {
+    color: black;
+}
+
+.goto_home:hover, 
+.goto_search:hover, 
+.goto_profile:hover {
+    background: var(--background_color);
+    transition: 0.4s ease-in-out;
+}
+
+.goto_home:hover, 
+.goto_search:hover, 
+.goto_profile:hover 
+.home_link:hover,
+.search_link:hover,
+.profile_link:hover {
+    color: white;
+}

@@ -1,8 +1,6 @@
 .signup {
     margin: 0 auto;
     background: var(--background_color);
-    height: 100vh;
-    overflow: hidden;
 }
 
 .signup_company {
@@ -22,13 +20,8 @@
     color: white;
 }
 
-.signup_info {
-    margin-top: 50px;
-    padding-top: 20px;
-}
-
-.signup_info > h2 {
-    margin-bottom: 20px;
+.signup > h2 {
+    margin: 50px 0 20px 0;
     color: white;
     font-size: 30px;
 }
@@ -37,12 +30,11 @@ label {
     font-size: 1.2rem;
 }
 
-.signup_form {
+.signup_info {
+    padding-top: 20px;
     background: white;
     border-top-left-radius: 13%;
-    padding: 40px 20px 0 30px;
-    height: 80vh;
-    margin: 0 auto;
+    padding: 40px 20px 30px 30px;
     text-align: left;
 }
 
@@ -54,8 +46,7 @@ label {
     font-size: 20px;
     color: white;
     background: var(--background_color);
-    border: 2px solid rgb(151, 151, 151);
-    margin:20px 0;
+    margin:20px auto;
 }
 
 .signup_button:hover {
@@ -68,42 +59,27 @@ label {
 }
 
 .signup_input {
-    margin-top: 10px;
+    margin-top: 5px;
     border-bottom: 1px solid grey;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 768px) {
     .signup_info {
-        width: 100%;
-        margin: 142px;
+        width: 60%;
+        border-radius: 10px;
+        margin: 0 auto;
     }
-    .signup_form {
-        width: 70%;
-        border-radius: 20px;
-        height: 500px;
+
+    .signup_company {
+        width: 20%;
     }
 
     .signup_input {
-        margin-bottom: 40px;
+        margin-bottom: 10px;
     }
 
     .alt_signup {
         margin-top: 30px;
         text-align: center;
-    }
-}
-
-@media (min-width: 720px) {
-    .signup_company {
-        width: 20%;
-    }
-    .signup_info {
-        width: 80%;
-        margin: 80px auto;
-    }
-    .signup_form {
-        width: 50%;
-        border-radius: 20px;
-        height: 500px;
     }
 }

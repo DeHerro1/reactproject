@@ -1,28 +1,21 @@
 import React from 'react';
 import './Feed.css';
-import { Link } from 'react-router-dom';
+import Nav from '../Nav/Nav';
+import { useHistory } from 'react-router-dom';
+import { useAuth } from '../../AuthContext';
 
 const Feed = () => {
+    let { setIsSignUp } = useAuth();
+    let history = useHistory();
+    const handleToSignup = () => {
+        setIsSignUp(false);
+        history.push('/');
+    }
     return (
         <div>
+            <button onClick={handleToSignup}> To signup </button>
             <p>Feeds</p>
-            <div className="navbar"> 
-                <Link className="goto_home home_link" to="/feed">
-                    <div>
-                        Home
-                    </div>
-                </Link>
-                <Link className="goto_search search_link" to="/search">
-                    <div>
-                        Search
-                    </div>
-                </Link>
-                <Link className="goto_profile profile_link" to="/profile">
-                    <div>
-                        Profile
-                    </div>
-                </Link>
-            </div>
+            <Nav />
         </div>
     )
 }
