@@ -1,0 +1,83 @@
+.userFormField {
+    padding-top: 100px;
+}
+
+.userForm {
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+.userForm > h2 {
+    text-align: center;
+    margin: 10px 0;
+    font-weight: 500;
+}
+
+.userDataContainer {
+    display: flex;
+    width: 100%;
+}
+
+.userData1, .userData2 {
+    width: 50%;
+}
+
+.userFormarea {
+    width: 90%;
+    min-height: 140px;
+}
+
+.userFormSelect {
+    width: 90%;
+    color: grey;
+    font-size: 16px;
+}
+
+.pdfContainer > input {
+    margin-top: 10px;
+    background-color: red;
+    color: white;
+}
+
+.pdfLabel {
+    color: red;
+    font-weight: 500;
+}
+
+.userFormInput, .userFormSelect {
+    height: 40px;
+    border: 1px solid rgb(196, 196, 196);
+    background-color: white;
+}
+
+.userFormInput::placeholder {
+    color: rgb(150, 150, 150);
+}
+
+.userFormarea::placeholder {
+    font-size: 16px;
+}
+
+.userTermsContainer {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    width: 250px;
+}
+
+.userTermsContainer > p {
+    margin-left: 10px;
+}
+
+.userTermsBox {
+    width: 20px;
+    margin: 0;
+}
+
+.userSubmitFormBtn {
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+}

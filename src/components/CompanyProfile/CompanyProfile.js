@@ -3,7 +3,7 @@ import './CompanyProfile.css';
 import OverAll from './OverAll/OverAll';
 import { Link } from 'react-router-dom';
 import Logo from '../../assets/logo.png';
-import Charts from '../charts/Charts';
+import BarCharts from '../charts/BarCharts';
 
 const CompanyProfile = ({
     companyName,
@@ -13,6 +13,7 @@ const CompanyProfile = ({
     img,
     Salary,
     workEnv,
+    job,
     jobSecurity,
     worklife,
     founded,
@@ -22,6 +23,9 @@ const CompanyProfile = ({
     benefits,
     mission,
     another,
+    jobBenefits,
+    maxYears,
+    minYears,
     companeEmail,
     website,
     type
@@ -60,7 +64,7 @@ const CompanyProfile = ({
                 <ul className="companyDetails">
                         <li className="detail">
                             <label className="companyN">{companyName} Overview</label>
-                            <div  className="overviewDetail toElse">Work Here?Get a Free Employer Account</div>
+                            <div  className="overviewDetail toElse">Work Here? Get a Free Employer Account</div>
                         </li>
                         <li className="detail">
                         <label>Website:</label>
@@ -99,12 +103,12 @@ const CompanyProfile = ({
             </div>
             <div className="jobRole">
                 <h2>Job Role Insight</h2>
-                <Charts />
+                <p><strong>Probation:</strong> Unknown/ Not approved</p>
+                <BarCharts max={maxYears} min={minYears} />
                 <div>
-                    <h3>Job : product manager</h3>
-                    <p>minimum number of working years: 2 years</p>
-                    <p>maximum number of working years: 10 years</p>
-                    <p><strong>benefits:</strong><br/> {benefits}</p>
+                    <h3>Job : {job}</h3>
+                    
+                    <p><strong>benefits:</strong><br/> {jobBenefits}</p>
                     <h3>Work life:</h3>
                     <ul>
                         {
@@ -119,6 +123,10 @@ const CompanyProfile = ({
                     </div>
                     
                     <h3>Reviews</h3>
+                    <div className="reviewContainer">
+                        <textarea placeholder="start your review"></textarea>
+                        <button>Submit review</button>
+                    </div>
                         <ul>
                             {
                                 reviews.map((review, index) => {

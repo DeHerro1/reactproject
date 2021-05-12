@@ -1,0 +1,17 @@
+.toSignUp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 500px;
+}
+
+.toSignUp > p {
+    font-size: 2.2rem;
+    margin: 40px auto;
+}
+
+.registerOptions {
+    display: flex;
+}

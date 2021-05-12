@@ -1,0 +1,186 @@
+.firstPageContainer {
+    background: #92f7ecd1;
+    width: 100%;
+    min-height: 80vh;
+}
+
+.searchAreaNav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.logo {
+    font-size: 1.3rem;
+}
+
+.navBarOptions {
+    display: flex;
+}
+
+.navBarOptions > li {
+    list-style: none;
+    padding: 2px;
+}
+
+.signupLink {
+    border: 1px solid black;
+    padding: 4px;
+    border-radius: 20px;
+}
+
+.navBarOp {
+    font-size: 1rem;
+    color: black;
+    margin-left: 10px;
+}
+
+.mainPageText {
+    width: 80%;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.mainPageText > h1 {
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.searchContainer {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.searchInputs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.searchInput {
+    padding: 20px;
+    background-color: white;
+    margin: 0;
+}
+
+.searchInput, 
+.dropdownInput,
+.searchJobBtn {
+    width: 100%;
+    height: 50px;
+    border-radius: 20px;
+}
+
+.searchJobBtn {
+    width: 30%;
+}
+
+.dropdownInput {
+    padding: 10px;
+    font-size: 1rem;
+    color: grey;
+    border: none;
+    margin: 10px;   
+}
+
+.searchJobBtn {
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    background-color: #00fff2;
+    font-size: 1.2rem;
+}
+
+.jobListingContianer {
+    width: 100%;
+    min-height: 50vh;
+}
+
+.browseJobsContainer, .hireTalent {
+    padding-top: 40px;
+    background-image: linear-gradient(to right, rgb(217, 243, 243) 20%, rgb(71, 240, 252));
+    height: 300px;
+}
+
+.browseJobs,
+.talents {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.browseJobs > h2, 
+.talents > h2 {
+    font-weight: 500;
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+}
+
+.toSearchJobsBtn, 
+.toPostJob {
+    margin: 10px auto;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    padding: 10px;
+    font-weight: 600;
+    height: 40px;
+    cursor: pointer;
+    background: white;
+    width: 50%;
+}
+
+.employersHead {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+.employersHead > h2 {
+    font-size: 2.7rem;
+}
+
+.employersAdsContent {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hireTalent {
+    height: 220px;
+}
+
+.ourStats {
+    height: 500px;
+}
+
+.ourStatsHead {
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+.statsContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.footer {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer > h2 {
+    font-size: 3em;
+    font-weight: 500;
+}
+
+.aboutUsImg {
+    width: 400px;
+    margin-bottom: 30px;
+}

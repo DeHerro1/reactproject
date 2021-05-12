@@ -1,0 +1,26 @@
+.signIconContainer {
+   display: flex;
+   justify-content: center;
+
+}
+
+.signIcon {
+    font-size: 100px !important;
+    color: black;
+}
+
+.toSignBtn {
+    background-color: #00fff2;
+    padding: 20px;
+    border: none;
+    border-radius: 20px;
+    border: 2px solid #00fff2;
+    font-size: 1.2rem;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.toSignBtn:hover {
+    border: 2px solid #00fff2;
+    background: none;
+}

@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import "./Home.css";
 import db from "../../firebase";
 import CompanyProfile from "../CompanyProfile/CompanyProfile";
 import SearchRounded from '@material-ui/icons/SearchRounded';
+import { useStateValue } from '../../AuthContext';
 
-const Home = ({ closeSearch, Icon, Locate, Work }) => {
+const SearchedJob = ({ closeSearch, Icon, Locate, Work }) => {
   const [posts, setPosts] = useState([]);
   const [company, setCompany] = useState("");
   const [said, setSaid] = useState([]);
@@ -13,6 +13,7 @@ const Home = ({ closeSearch, Icon, Locate, Work }) => {
   const [location, setLocation] = useState("");
   const [roleInfo, setRoleInfo] = useState([]);
   const [selectJob, setSelectJob] = useState('');
+  const [{SearchJob}, dispatch] = useStateValue();
 
   let verRole = false;
   useEffect(() => {
@@ -48,6 +49,8 @@ const Home = ({ closeSearch, Icon, Locate, Work }) => {
   }
   see();
 
+  
+
 let uniqueArray = jobResults.filter(function(item, pos) {
     return jobResults.indexOf(item) === pos;
 })
@@ -62,9 +65,13 @@ let uniqueArray = jobResults.filter(function(item, pos) {
       const regex = new RegExp(`^${value}`, "i");
       suggestions = display.sort().filter((v) => regex.test(v));
     }
+    
     setSaid(() => suggestions);
     setCompany(value);
   };
+
+  
+  console.log(SearchJob?.length);
 
   const handleLocation = (e) => {
     const value = e.target.value;
@@ -172,48 +179,11 @@ let uniqueArray = jobResults.filter(function(item, pos) {
   };
 
   return (
-    <div className="home">
-      <div className="nav">
-        <div className="searchInputsContainer">
-          <div className="searchInputs">
-            {/* <Icon onClick={closeSearch} className="goBackIcon" /> */}
-            <input
-              type="text"
-              onChange={handleChange}
-              value={company}
-              placeholder="Search Companies"
-            />
-          </div>
-          <div className="searchInputs">
-          <select className="searchInputs" value={selectJob} onChange={handleJobSelected}>
-            <option unselectable>Select Job</option>
-            {
-                uniqueArray.map((job, index) => {
-                   return <option key={index} value={job}> {job} </option>
-                })
-            }
-          </select>
-          </div>
-          <div className="searchInputs">
-              <input
-            type="text"
-            onChange={handleLocation}
-            value={location}
-            placeholder="Location"
-          />
-          </div>
-          <SearchRounded className="searchBtn" onClick={Search} />
-        </div>
-
-        {/* <button className="searchBtn" onClick={Search}>
-          Search
-        </button> */}
-        
-      </div>
-      {renderSuggestions()}
-      {showResult && showCompanyInfo()}
+    <div>
+        <p>Searched Company Info</p>
+        {/* <CompanyProfile /> */}
     </div>
   );
 };
 
-export default Home;
+export default SearchedJob;
